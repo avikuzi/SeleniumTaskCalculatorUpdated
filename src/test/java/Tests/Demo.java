@@ -26,6 +26,7 @@ public class Demo extends HomePage {
 
 
     }
+
     @Test
     public void testWithOneChrome(ChromeDriver chromeDriver) {
         // Use Chrome in this test
@@ -37,7 +38,6 @@ public class Demo extends HomePage {
         WebDriver driver = RunEnvironment.getWebDriver();
         driver.get("https://web2.0calc.com/");
     }
-
 
 
     @Test
@@ -110,30 +110,10 @@ public class Demo extends HomePage {
         System.out.println("Assert passed");
 
 
-
-
 //validate correct number of all 4 formulas above
-    History.click();
+        History.click();
 
 
-        }
-
-
-
-
-
-
-    /*List<WebElement> rows = null;
-        int count;
-        rows = driver.findElement(By.xpath(//*[@id="histframe"]");
-         count = rows.size())
-        System.out.println("ROW COUNT : "+count );
-        for (int i = 0; i < count ; i++){
-        String optionsValue = rows.get(i).getText();
-        System.out.println(optionsValue);
     }
-    Assert.assertTrue(4 == rows.size());
-        EnvironmentManager.shutDownDriver();*/
-    }
-
+}
 
