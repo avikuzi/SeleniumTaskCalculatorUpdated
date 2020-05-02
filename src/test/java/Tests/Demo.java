@@ -113,7 +113,7 @@ public class Demo extends HomePage {
 
         int total_formulas = History.size();
 
-        System.out.println("Total month Count is = " +total_formulas);
+        System.out.println("Total Formula Count is = " +total_formulas);
 
 
 
