@@ -2,21 +2,16 @@ package Tests;
 
 import Environment.EnvironmentManager;
 import Environment.RunEnvironment;
-import org.apache.bcel.generic.Select;
-import org.apache.bcel.generic.Visitor;
+import io.github.bonigarcia.seljup.SeleniumExtension;
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 import org.junit.Before;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.junit.jupiter.api.extension.ExtendWith;
-
-import io.github.bonigarcia.seljup.SeleniumExtension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @ExtendWith(SeleniumExtension.class)
@@ -43,8 +38,7 @@ public class Demo extends HomePage {
     @Test
     public void result1() throws InterruptedException {
 
-        startBrowser();
-        wait();
+
         Accept.click();
         Btn2.click();
         BtnPlus.click();
@@ -54,7 +48,8 @@ public class Demo extends HomePage {
         History.click();
         System.out.println(strng);
         Assert.assertEquals("2+5", strng);
-        System.out.println("Assert passed");
+
+
 
 
     }
@@ -71,7 +66,8 @@ public class Demo extends HomePage {
         History.click();
         System.out.println(strng2);
         Assert.assertEquals("10-2", strng2);
-        System.out.println("Assert passed");
+        Assert.assertNotEquals(20,10-2);
+
     }
 
     @Test
@@ -113,7 +109,17 @@ public class Demo extends HomePage {
 //validate correct number of all 4 formulas above
         History.click();
 
+        List<WebElement> History = driver.findElements(By.xpath("///*[@id=\"histframe\"]"));
+
+        int total_formulas = History.size();
+
+        System.out.println("Total month Count is = " +total_formulas);
+
+
+
+
+            }
 
     }
-}
+
 

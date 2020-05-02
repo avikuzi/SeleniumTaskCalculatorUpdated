@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class EnvironmentManager extends RunEnvironment {
 
     public static void initWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ak2300\\Automation\\Calculator_SeleniumTask/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ak2300\\downloads\\SeleniumTaskCalculator/chromedriver 8.exe");
         WebDriver driver = new ChromeDriver();
         RunEnvironment.setWebDriver(driver);
     }
