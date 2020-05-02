@@ -66,7 +66,7 @@ public class Demo extends HomePage {
         History.click();
         System.out.println(strng2);
         Assert.assertEquals("10-2", strng2);
-        Assert.assertNotEquals(20,10-2);
+
 
     }
 
@@ -86,6 +86,7 @@ public class Demo extends HomePage {
         History.click();
         System.out.println(strng3);
         Assert.assertEquals("(10-2)*2", strng3);
+        Assert.assertNotEquals(20,(10-2)*2);
         System.out.println("Assert passed");
 
     }
